@@ -1,0 +1,488 @@
+body{
+    margin: 0;
+}
+
+/* Media Query */
+@media only screen and (max-width:1200px){
+    body{
+        font-size: auto;
+    }
+}
+@media only screen and (max-width:992px){
+    body{
+        font-size: auto;
+    }
+}
+@media only screen and (max-width:768px){
+    body{
+        font-size: auto;
+    }
+    .carousel-contentA{
+        top: 50px;
+        left: 100px;
+    }
+    .carousel-contentB{
+        top: 80px;
+        left: 100px;
+    }
+}
+@media only screen and (max-width:576px){
+    body{
+        font-size: auto;
+    }
+}
+/* End of Media Query */
+
+
+/* Styling for The Preloader */
+#myDiv{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+#myImage{
+    margin: auto;
+}
+/* End of styling for The Preloader */
+
+
+/* Styling for The Black Column */
+.div1{
+    background-color: black;
+    border-right: 1px solid white;
+}
+.div2{
+    background-color: black;
+    border-right: 1px solid white;
+}
+.pdiv1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-left: 50px;
+    margin-top: 5px;
+    color: white;
+}
+.atag1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: white;
+}
+.atag1:hover{
+    color: palevioletred!important;
+}
+/* End of styling for The Black Column */
+
+
+/* NavBar Styling */
+.navbar{
+    position: sticky!important;
+    top: 0;
+    height: 15vh;
+    z-index: 99;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.356)!important;
+}
+.homeLink{
+    color: palevioletred!important;
+}
+.aLink:hover{
+    color: palevioletred!important;
+}
+.h1-coza{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin-left: 5px;
+    text-shadow: 0 2px 4px rgba(128, 128, 128, 0.616);
+}
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+.right{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+/* End of NavBar Styling */
+
+
+/* Styling of Cart Modal */
+.times{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.cart-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+#cart {
+    position: relative;
+}
+.cart-quantity {
+    color: white;
+    background-color: palevioletred;
+    padding: .2em .2em;
+    position: absolute;
+    margin: .4em 4.3em 0 0;
+    right: -1px;
+    top: 12px;
+    border: solid 1px palevioletred;
+    border-radius: 50%;
+    font-weight: bolder;
+}
+.card {
+    margin: 1em;
+    position: relative;
+    overflow: hidden; 
+}
+.card:hover .add-to-carts {
+    transform: translateX(0);
+}
+.add-to-carts {
+    background-color: palevioletred;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    padding: 5px 10px; 
+    transform: translateX(300px);
+    transition: .5s ease;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+}
+.product-price {
+    padding-top: 10px;
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.733);
+    font-family: 'Poppins', sans-serif;
+}
+.cardLink{
+    text-decoration: none!important;
+    color: rgba(128, 128, 128, 0.733);
+    font-family: 'Poppins', sans-serif;
+}
+.cardLink:hover{
+    color: palevioletred;
+}
+.cart-modal-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: .5s ease-out;
+    
+}
+.cart-modal {
+    height: 100vh;
+    width: 50%;
+    background-color: palevioletred;
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#close-btn {
+    font-size: 1.5rem;
+    float: right;
+    margin: .5em 2em 0 0;
+    color: white;
+    cursor: pointer;
+}
+.cart-is-empty {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    display: none;
+    
+}
+.product-rows {
+    margin-top: 3em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.total {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+.cart-total {
+    color: white;
+}
+.total-price {
+    color: white;
+    font-size: 2rem;
+    display: block;
+}
+.purchase-btn {
+    font-size: 15px;
+    background-color: white;
+    color: palevioletred;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0 5px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.purchase-btn:hover {
+    color: white;
+    background-color: palevioletred;
+    border: white solid 1px;
+}
+/* End of Cart Modal Styling */
+
+
+/* Styling of Shop */
+.another{
+    height: 265vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.950), rgba(0, 0, 0, 0.250)),
+    url(../img/first-section-background.jpeg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Styling All Products and Links */
+.span8{
+    margin-left: 25px;
+    padding-top: 30px;
+}
+.span4{
+    padding-top: 30px;
+}
+.product-link{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.733);
+    margin-right: 30px;
+}
+.A{
+    color: palevioletred!important;
+}
+.B:hover{
+    color: palevioletred!important;
+}
+.button1{
+    padding: 6px 20px 6px 20px!important;
+    border-radius: 15px!important;
+    font-size: 12px!important;
+    color: rgba(128, 128, 128, 0.733)!important;
+    background-color: white!important;
+    border: 1px solid rgba(128, 128, 128, 0.733)!important;
+    outline: none!important;
+}
+/* End Style of All Products and Links */
+
+
+/* Hidden Filer */
+.filterCon{
+    background-color: rgba(43, 40, 40, 0.733)!important;
+    padding: 20px;
+    display: none;
+}
+.filterColumn{
+    display: flex;
+    flex-direction: column;
+}
+.filterHead{
+    font-size: 18px;
+    color: rgb(124, 122, 122);
+    font-family: 'Poppins', sans-serif;
+}
+.filterLink{
+    font-size: 15px!important;
+    color: rgba(128, 128, 128, 0.733);
+    font-family: 'Poppins', sans-serif!important;
+    padding-top: 5px;
+}
+.filterLink:hover{
+    color: palevioletred!important;
+}
+.buttonFilter{
+    font-size: 12px!important;
+    color: rgba(128, 128, 128, 0.733)!important;
+    font-family: 'Poppins', sans-serif!important;
+    border-radius: 50px!important;
+    background-color: transparent!important;
+    border: 1px solid rgba(128, 128, 128, 0.733)!important;
+    margin: 5px;
+    margin-left: -4px;
+}
+.buttonFilter:hover{
+    border: 1px solid palevioletred!important;
+    color: palevioletred!important;
+}
+.black{color: black; font-size: 13px;}
+.blue{color: blue; font-size: 13px;}
+.grey{color: grey; font-size: 13px;}
+.green{color: green; font-size: 13px;}
+.red{color: red; font-size: 13px;}
+.white{color: white; font-size: 13px; border: 1px solid rgba(128, 128, 128, 0.733); border-radius: 100px;}
+/* End of hidden filter */
+
+
+/* Styling Products Add To Cart */
+.itemProducts{
+    display: flex;
+}
+.add-to-cart{
+    background-color: palevioletred;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    padding: 5px 10px; 
+    transform: translateX(300px);
+    transition: .5s ease;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+}
+.card:hover .add-to-cart {
+    transform: translateX(0);
+}
+/* End Products Add To Cart */
+/* End of Shop Styling */
+
+
+/* The Styling for the HTML Codes in main.js */
+.product-row {
+    display: flex;
+    align-items: center;
+}
+.cart-image {
+    width: 10rem;
+    margin: 1em;
+}
+.cart-price {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.product-quantity {
+    width: 4rem;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+.remove-btn {
+    padding: 1em 2em;
+    background-color: palevioletred;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+.remove-btn:active {
+    transform: translateY(5px);
+}
+
+@media (max-width: 1200px){
+    .cart-modal {
+        width: 100vw;
+    } 
+    
+    .product-row {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    
+    .remove-btn {
+        margin: 0
+    }
+    
+    .product-quantity {
+        margin: .5em 0 .5em 0
+    }
+}
+/* End of The Styling for the HTML Codes in main.js */
+
+
+/* Styling for The Footer */
+.footer{
+    background-color: rgba(128, 128, 128, 0.356)!important;
+    width: 100%!important;
+    margin: 0%;
+}
+.footerH6{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+}
+.footer-text{
+    color: black;
+    font-weight: bold;
+}
+.aFooter{
+    color: black!important;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.aFooter:hover{
+    color: palevioletred!important;
+}
+.margin{
+    margin-top: 30px;
+}
+.footer-link{
+    color: black!important;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-link:hover{
+    color: palevioletred!important;
+}
+.fLink{
+    margin-left: 20px;
+}
+.footer-input{
+    outline: none!important;
+}
+.footer-submit{
+    width: 150px!important;
+    border-radius: 50px!important;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: palevioletred!important;
+    color: white!important;
+}
+.footer-submit:hover{
+    background-color: white!important;
+    color: palevioletred!important;
+}
+.paymenT{
+    margin-top: 50px;
+    display: flex;
+}
+.payments{
+    margin-left: 30rem;
+}
+.footer-end{
+    margin-top: 5px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+/* End of The Footer Styling */

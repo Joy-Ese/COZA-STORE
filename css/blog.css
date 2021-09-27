@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+}
+
+/* Media Query */
+@media only screen and (max-width:1200px){
+    body{
+        font-size: auto;
+    }
+}
+@media only screen and (max-width:992px){
+    body{
+        font-size: auto;
+    }
+}
+@media only screen and (max-width:768px){
+    body{
+        font-size: auto;
+    }
+}
+@media only screen and (max-width:576px){
+    body{
+        font-size: auto;
+    }
+}
+/* End of Media Query */
+
+
+/* Styling for The Preloader */
+#myDiv{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+#myImage{
+    margin: auto;
+}
+/* End of styling for The Preloader */
+
+
+/* Styling for The Black Column */
+.div1{
+    background-color: black;
+    border-right: 1px solid white;
+}
+.div2{
+    background-color: black;
+    border-right: 1px solid white;
+}
+.pdiv1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-left: 50px;
+    margin-top: 5px;
+    color: white;
+}
+.atag1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: white;
+}
+.atag1:hover{
+    color: palevioletred!important;
+}
+/* End of styling for The Black Column */
+
+
+/* NavBar Styling */
+.navbar{
+    position: sticky!important;
+    top: 0;
+    height: 15vh;
+    z-index: 99;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.356)!important;
+}
+.homeLink{
+    color: palevioletred!important;
+}
+.aLink:hover{
+    color: palevioletred!important;
+}
+.h1-coza{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin-left: 5px;
+    text-shadow: 0 2px 4px rgba(128, 128, 128, 0.616);
+}
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+.right{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+/* End of NavBar Styling */
+
+
+/* Styling of Cart Modal */
+.times{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.cart-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+#cart {
+    position: relative;
+}
+.cart-quantity {
+    color: white;
+    background-color: palevioletred;
+    padding: .2em .2em;
+    position: absolute;
+    margin: .4em 4.3em 0 0;
+    right: -1px;
+    top: 12px;
+    border: solid 1px palevioletred;
+    border-radius: 50%;
+    font-weight: bolder;
+}
+.cart-modal-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: .5s ease-out;
+    
+}
+.cart-modal {
+    height: 100vh;
+    width: 50%;
+    background-color: palevioletred;
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#close-btn {
+    font-size: 1.5rem;
+    float: right;
+    margin: .5em 2em 0 0;
+    color: white;
+    cursor: pointer;
+}
+.cart-is-empty {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    display: none;
+}
+.product-rows {
+    margin-top: 3em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.total {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+.cart-total {
+    color: white;
+}
+.total-price {
+    color: white;
+    font-size: 2rem;
+    display: block;
+}
+.purchase-btn {
+    font-size: 15px;
+    background-color: white;
+    color: palevioletred;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0 5px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.purchase-btn:hover {
+    color: white;
+    background-color: palevioletred;
+    border: white solid 1px;
+}
+/* End of Cart Modal Styling */
+
+
+/* The Styling for the HTML Codes in main.js */
+.product-row {
+    display: flex;
+    align-items: center;
+}
+.cart-image {
+    width: 10rem;
+    margin: 1em;
+}
+.cart-price {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.product-quantity {
+    width: 4rem;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+.remove-btn {
+    padding: 1em 2em;
+    background-color: palevioletred;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+.remove-btn:active {
+    transform: translateY(5px);
+}
+
+@media (max-width: 1200px){
+    .cart-modal {
+        width: 100vw;
+    } 
+    
+    .product-row {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    
+    .remove-btn {
+        margin: 0
+    }
+    
+    .product-quantity {
+        margin: .5em 0 .5em 0
+    }
+}
+/* End of The Styling for the HTML Codes in main.js */
+
+
+
+/* Styling for The Footer */
+.footer{
+    background-color: rgba(128, 128, 128, 0.356)!important;
+    width: 100%!important;
+    margin: 0%;
+    margin-top: -90px;
+}
+.footerH6{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+}
+.footer-text{
+    color: black;
+    font-weight: bold;
+}
+.aFooter{
+    color: black!important;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.aFooter:hover{
+    color: palevioletred!important;
+}
+.margin{
+    margin-top: 30px;
+}
+.footer-link{
+    color: black!important;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-link:hover{
+    color: palevioletred!important;
+}
+.fLink{
+    margin-left: 20px;
+}
+.footer-input{
+    outline: none!important;
+}
+.footer-submit{
+    width: 150px!important;
+    border-radius: 50px!important;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: palevioletred!important;
+    color: white!important;
+}
+.footer-submit:hover{
+    background-color: white!important;
+    color: palevioletred!important;
+}
+.paymenT{
+    margin-top: 50px;
+    display: flex;
+}
+.payments{
+    margin-left: 30rem;
+}
+.footer-end{
+    margin-top: 5px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+/* End of The Footer Styling */

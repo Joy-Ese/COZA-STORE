@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | COZA STORE</title>
+
+    <link rel="shortcut icon" href="../img/C2.png" type="image/x-icon">
+
+    <script src="../javascript/jquery.js"></script>
+    <script src="../javascript/main.js"></script>
+
+    <script src="../boot/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/style-blog.css">
+    <link rel="stylesheet" href="../boot/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" 
+        href="../../fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+<!-- The Preloader -->
+<div id="myDiv">
+    <input type="button" onclick="show()"> 
+    <br>
+    <br>
+    <img src="../img/22.gif" alt="" id="myImage" width="10%" style="margin-top: 7rem;">
+</div>
+<br>
+<script type="text/javascript">
+    setTimeout(function () {
+        document.getElementById("myDiv").style.display="none";
+    },
+    3000);
+</script>
+<!-- End of Preloader Code -->
+
+
+<!-- The Black Column Code -->
+<div  class="container-fluid">
+    <div class="row">
+        <div class="div1 col-12 col-md-12 col-lg-7 col-xl-7">
+            <p class="pdiv1">Free shipping for standard order over $100</p>
+        </div>
+        <div class="div2 col-12 col-md-6 col-lg-1 col-xl-1">
+            <a class="atag1 text-decoration-none" href="#">Help & FAQs</a>
+        </div>
+        <div class="div2 col-12 col-md-6 col-lg-1 col-xl-1">
+            <a class="atag1 text-decoration-none" href="#">My Account</a>
+        </div>
+        <div class="div2 col-12 col-md-6 col-lg-1 col-xl-1">
+            <a class="atag1 text-decoration-none" href="#">EN</a>
+        </div>
+        <div class="div2 col-12 col-md-6 col-lg-1 col-xl-1">
+            <a class="atag1 text-decoration-none" href="#">USD</a>
+        </div>
+        <div class="div2 col-12 col-md-6 col-lg-0 col-xl-1">
+            <a class="atag1 text-decoration-none" href="#">EUR</a>
+        </div>
+    </div>
+</div>
+<!-- End of The Black Column Code -->
+
+
+<!-- The NavBar --> 
+<nav class="navbar navbar-expand-md d-flex justify-content-center
+            align-items-center bg-light navbar-light sticky">
+    
+    <a class="navbar-brand" href="#">
+        <b><h4 class="h1-coza">COZA STORE</h4></b>
+    </a>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav justify-content-end" style="width: 100%;">
+            <li class="nav-item active">
+                <a class="aLink nav-link" href="coza-store.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="aLink nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="aLink nav-link" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="aLink nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="homeLink aLink nav-link" href="contact.html">Contact</a>
+            </li>
+            <div class="container d-flex justify-content-end" style="float: right;">
+                <form class="form-inline">
+                    <input class="form-control form-control-sm mr-15 w-85"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search">
+                </form>
+                <li class="nav-item">
+                    <a class="aLink nav-link" href="#">
+                        <i class="right fat fas fa-search" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item"  onclick="openNav()">
+                    <a class="cart-btn aLink nav-link" href="#">
+                        <span class ="cart-quantity">0</span>
+                        <i id="cart" class="right fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="aLink nav-link" href="#"><i class="right fas fa-th"></i></a>
+                </li>
+            </div>
+        </ul>
+    </div>
+</nav>
+<!-- End of NavBar Code -->
+
+<!--  Cart Modal Code -->
+<div class="cart-modal-overlay">
+    <div class="cart-modal">
+        <i id="close-btn" class="times fas fa-times"></i>
+        <h1 class="cart-is-empty">Cart is empty</h1>
+        <div class="product-rows"></div>
+        <div class="total">
+            <h1 class="cart-total">TOTAL</h1>
+            <span class="total-price">$0</span>
+            <button class="purchase-btn">PURCHASE</button>
+        </div>
+    </div>
+</div>
+<!--   End of Cart Modal Code -->
+
+
+    <section class="img1 container-fluid d-flex justify-content-center align-items-center" 
+        style="padding: 50px 0px;">
+    
+        <h1 class="txt1">Blog</h1>
+
+    </section>
+
+    <section class="container-md firstdiv">
+           <div class="row">
+               <div class="col-md-8 n">
+                  
+                    <section>
+                        <div class="inner">
+                            <a href="#"><img  class="img-fluid pix2" src="../img/pe.jpg" alt=""></a>
+                           </div>
+                            <div class="flex-col-c-m box-size calender-box">
+                                <span class="calender-box-date cl2 txt-center">
+                                    15
+                                </span>
+        
+                                <span class="foryear cl3 txt-center">
+                                    Jan 2018
+                                </span>
+                            </div>
+                            
+                        <a href="blogdetails.html"class="inspire" style="text-decoration: none;">
+                            <h4 style="color: palevioletred;">8 Inspring Winter Clothes for women</h4></a>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+                            
+                        <div class="comment">
+                            <span>
+                                 <span class="span2">By</span><span class="span3">Admin</span>
+                                    <span class="span4">|</span>
+                            </span>
+        
+                            <span>
+                                <span class="span2">Streetstyle,fashion and couple</span>
+                                   <span class="span4">|</span>
+                                   <span class="span4">8 comments</span>
+        
+                           </span>
+        
+                            <div class="continue">
+                                    <a class="trans-04" style="text-decoration: none; font-family:sans-serif; color: #333333; font-weight:600; font-size:14px;" href="#">Continue
+                                        <i class="fa fa-long-arrow-right m-l-9"></i>
+                                    </a>
+                            </div>
+                           
+                        </div>
+    
+                    </section>
+
+
+
+                    <section>
+                        <div class="inner" style="margin-top: 6rem;">
+                            <a href="#"><img  class="img-fluid pix2" src="../img/2.jpg" alt=""></a>
+                           </div>
+                            <div class="flex-col-c-m box-size calender-box">
+                                <span class="calender-box-date cl2 txt-center">
+                                    15
+                                </span>
+        
+                                <span class="foryear cl3 txt-center">
+                                    Jan 2018
+                                </span>
+                            </div>
+                            
+                        <a href="#"class="inspire" style="text-decoration: none;"><h4 style="color: palevioletred;">5 DIY Clothing ideas for you</h4></a>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+                            
+                        <div class="comment">
+                            <span>
+                                 <span class="span2">By</span><span class="span3">Admin</span>
+                                    <span class="span4">|</span>
+                            </span>
+        
+                            <span>
+                                <span class="span2">Streetstyle,fashion and couple</span>
+                                   <span class="span4">|</span>
+                                   <span class="span4">8 comments</span>
+        
+                           </span>
+        
+                            <div class="continue">
+                                    <a class="trans-04" style="text-decoration: none; font-family:sans-serif; color: #333333; font-weight:600; font-size:14px;" href="#">Continue
+                                        <i class="fa fa-long-arrow-right m-l-9"></i>
+                                    </a>
+                            </div>
+                           
+                        </div>
+    
+                    </section>
+
+
+
+
+                    <section>
+                        <div class="inner" style="margin-top: 6rem;">
+                            <a href="#"><img  class="img-fluid pix2" src="../img/oo.jpg" alt=""></a>
+                           </div>
+                            <div class="flex-col-c-m box-size calender-box">
+                                <span class="calender-box-date cl2 txt-center">
+                                    15
+                                </span>
+        
+                                <span class="foryear cl3 txt-center">
+                                    Jan 2018
+                                </span>
+                            </div>
+                            
+                         <a href="#" class="inspire" style="text-decoration: none;"><h4 style="color: palevioletred;">The Great Big List of Men’s Gifts for the Holidays</h4></a>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+                            
+                        <div class="comment">
+                            <span>
+                                 <span class="span2">By</span><span class="span3">Admin</span>
+                                    <span class="span4">|</span>
+                            </span>
+        
+                            <span>
+                                <span class="span2">Streetstyle,fashion and couple</span>
+                                   <span class="span4">|</span>
+                                   <span class="span4">8 comments</span>
+        
+                           </span>
+        
+                            <div class="continue">
+                                    <a class="trans-04" style="text-decoration: none; font-family:sans-serif; color: #333333; font-weight:600; font-size:14px;" href="#">Continue
+                                        <i class="fa fa-long-arrow-right m-l-9"></i>
+                                    </a>
+                            </div>
+                           
+                        </div>
+    
+                    </section>
+
+
+
+                    
+              
+                    <!-- Pagianation -->
+                    <div class="pagination1">
+                        <nav aria-label="...">
+                            <ul class="pagination pagination-sm ">
+                                <li class="page-item active  " aria-current="page">
+                                    <span class="page-link">1</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+
+                 
+                </div>
+
+                    
+
+
+                <!-- Left Hand side, search and categories -->
+
+                
+               
+
+                  
+                <div class="col-md-4">
+                    <div class="side-menu">
+                        <div class="search1 outline of-hidden text1">
+							<input class="in" type="text" name="search" placeholder="Search">
+
+							<button class="flex-c-m colo outline">
+								<i class="zmdi zmdi-search"></i>
+							</button>
+						</div>
+
+						<div class="Categories" style="margin-left: 8px;">
+							<h4 class="text2 cl2 p-b-33" style="margin-left: 1.2rem; margin-top: 1.0rem;">
+								Categories
+							</h4>
+
+							<section style="padding-left: 1.5rem;">
+								<div class="topline">
+									<a href="#" style="font-size: 1.140rem; text-decoration: none;" class="a block text3 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 a2">
+										Fashion
+									</a>
+								</div>
+
+								<div class="topline">
+									<a href="#" style="font-size: 1.190rem;text-decoration: none;" class="a block text3 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 a2">
+										Beauty
+									</a>
+								</div>
+
+								<div class="topline">
+									<a href="#" style="font-size: 1.140rem;text-decoration: none;" class="a block text3 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 a2">
+										Street Style
+									</a>
+								</div>
+
+								<div class="topline">
+									<a href="#" style="font-size: 1.140rem ;text-decoration: none;" class="a block text3 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 a2">
+										Life Style
+									</a>
+								</div>
+
+								<div class="topline">
+									<a href="#" style="font-size: 1.140rem;text-decoration: none;" class="a block text3 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 a2">
+										DIY & Crafts
+									</a>
+								</div>
+
+
+                                <div class="topline">
+									<a href="#" style="font-size: 1.140rem;text-decoration: none;" class="a block text3 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 a2">
+									
+									</a>
+								</div>
+							</section>
+                        </div>
+
+
+                        <aside style="margin-top: 2rem;">
+                            <h4 class="text2 cl2 p-b-33" style="margin-left: 1.28rem; margin-top: 1.0rem;">
+								Featured Products
+							</h4>
+
+
+                            <div>
+                                <section>
+                                    <a href="#" class="pix-size" >
+                                     <img src="../img/76.png" alt="" style="margin-left: 1.28rem;">
+                                    </a>
+  
+                                    <aside class= "featuredprod">
+                                        <a href="#"  class="stext-116 cl8 hov-cl1 trans-04" style="color: #474747; text-decoration: none;">Brown Shirt With Pleat Detail Back</a>
+  
+                                        <p>$19</p>
+                                    </aside>
+                                </section>
+                              </div>
+
+
+                              <div style="margin-top: 3.3rem;">
+                                <section>
+                                    <a href="#" class="pix-size">
+                                     <img src="../img/60.png" alt="" style="margin-left: 1.28rem;">
+                                    </a>
+  
+                                    <aside class= "featuredprod">
+                                        <a href="#" class="stext-116 cl8 hov-cl1 trans-04" style="color: #474747;text-decoration: none;">Golden Shirt With Pleat Detail Back</a>
+  
+                                        <p>$19</p>
+                                    </aside>
+                                </section>
+                              </div>
+
+
+                              <div style="margin-top: 3.3rem;">
+                                <section>
+                                    <a href="#" class="pix-size">
+                                     <img src="../img/4k.png" alt="" style="margin-left: 1.28rem;">
+                                    </a>
+  
+                                    <aside class= "featuredprod">
+                                        <a href="#" class="stext-116 cl8 hov-cl1 trans-04" style="color: #474747;text-decoration: none;">White Shirt With Pleat Detail Back</a>
+  
+                                        <p>$19</p>
+                                    </aside>
+                                </section>
+                              </div>
+                        </aside>
+
+
+                        <section style="margin-left: 1.28rem;">
+                            <h4 class="text2 cl2 p-b-33" style="margin-left: 0.1rem; margin-top: 3.0rem; font-size: 23px;">
+								Archive
+							</h4>
+
+                            <div style="margin-top: -1rem;">
+                                <div class="archive">
+                                    <a href="#" style="text-decoration: none">
+                                        <p class="p3">July 2018</p>
+                                    <span class="span">(19)</span>
+                                    </a>
+                                </div>
+    
+    
+                                <div class="archive" >
+                                    <a href="#" style="text-decoration: none">
+                                        <p class="p3">December 2018</p>
+                                    <span class="span">(19)</span>
+                                    </a>
+                                </div>
+    
+    
+                                <div class="archive">
+                                    <a href="#" style="text-decoration: none">
+                                        <p class="p3">September 2018</p>
+                                    <span class="span">(7)</span>
+                                    </a>
+                                </div>
+    
+    
+                                <div class="archive" >
+                                    <a href="#"style="text-decoration: none">
+                                        <p class="p3">April 2018</p>
+                                    <span class="span">(19)</span>
+                                    </a>
+                                </div>
+    
+    
+                                <div class="archive">
+                                    <a href="#" style="text-decoration: none">
+                                        <p class="p3">July 2018</p>
+                                    <span class="span">(19)</span>
+                                    </a>
+                                </div>
+    
+    
+                                <div class="archive" >
+                                    <a href="#"style="text-decoration: none">
+                                        <p class="p3">February 2018</p>
+                                    <span class="span">(17)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <aside>
+                                <div style="margin-left: 1.28rem; text-decoration: none;">
+                                    <h4 class="text2 cl2 p-b-33 ta" style="margin-left: 0.1rem; margin-top: 2rem; text-decoration: none;">
+                                        Tags
+                                    </h4>
+
+                                    <div class="tag1 tag">
+                                        <a button="#" class="border1 hover1 tag2 taga" style="text-decoration: none; margin-left: 1.1rem;">
+                                            Fashion
+                                        </a>
+    
+    
+                                        <a href="#" class="border1 hover1 tag2 tagb" style="text-decoration: none; margin-left:1.3rem ;">
+                                            Lifestyle
+                                        </a>
+    
+                                       <!-- <aside> -->
+                                        <a href="#" class="border1 hover1 tag2 tagc" style="text-decoration: none; margin-left: 1.3rem;">
+                                            Lifestyle
+                                        </a>
+                                       <!-- </aside> -->
+                                       
+                                       
+    
+                                    </div>
+
+                                    <div class="tag3">
+                                        <a href="#" class="border1 hover1 tag2 tagd" style="text-decoration: none; margin-left: 1.1rem;">
+                                            Lifestyle
+                                           </a>
+    
+                                           <a href="#" class="border1 hover1 tag2 tage" style="text-decoration: none; margin-left: 1.3rem;">
+                                            Lifestyle
+                                          </a>
+                                    </div>
+
+
+                            
+                                   <!-- <section style="padding: 1rem; margin-left: -1.7rem;"> -->
+                                         
+                                   
+
+
+                                   <!-- </section> -->
+
+
+
+                                </div>
+                        </aside>
+				
+
+                    </div>
+             
+               </div> 
+           </div>
+                           
+                
+            
+    </section>
+
+
+<!-- The Footer Code -->
+<footer class="footer page-footer font-small unique-color-dark">
+    <div class="container text-center text-md-left mt-5">
+        <div class="row mt-3">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="footerH6 text-uppercase font-weight-bold">Categories</h6>
+                <p class="margin">
+                    <a class="aFooter text-decoration-none" href="#">Women</a>
+                </p>
+                <p>
+                    <a class="aFooter text-decoration-none" href="#">Men</a>
+                </p>
+                <p>
+                    <a class="aFooter text-decoration-none" href="#">Shoes</a>
+                </p>
+                <p>
+                    <a class="aFooter text-decoration-none" href="#">Watches</a>
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="footerH6 text-uppercase font-weight-bold">Help</h6>
+                <p class="margin">
+                    <a class="aFooter text-decoration-none" href="#">Track Order</a>
+                </p>
+                <p>
+                    <a class="aFooter text-decoration-none" href="#">Returns</a>
+                </p>
+                <p>
+                    <a class="aFooter text-decoration-none" href="#">Shipping</a>
+                </p>
+                <p>
+                    <a class="aFooter text-decoration-none" href="#">FAQs</a>
+                </p>
+            </div>
+
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="footerH6 text-uppercase font-weight-bold">GET IN TOUCH</h6>
+                <p class="margin footer-text">Any questions? Let us know in store at 8th floor,
+                    379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                </p>
+                <p>
+                    <a class="footer-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="footer-link fLink" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="footer-link fLink" href="#"><i class="fab fa-pinterest-p"></i></a>
+                </p>
+            </div>
+
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="footerH6 text-uppercase font-weight-bold">NEWSLETTER</h6>
+                <div class="margin form-group">
+                    <input type="email" class="footer-input form-control" placeholder="email@example.com">
+                    <input type="submit" class="footer-submit form-control" value="Subscribe">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="paymenT container">
+        <a class="payments" href="#"><img src="img/paypal.webp" alt=""></a>
+        <a href="#"><img src="img/payvisa.webp" alt=""></a>
+        <a href="#"><img src="img/paymaster.webp" alt=""></a>
+        <a href="#"><img src="img/payblue.webp" alt=""></a>
+        <a href="#"><img src="img/paydiscover.webp" alt=""></a>
+    </div>
+    
+
+    <div class="footer-end footer-copyright text-center py-3">Copyright ©2021 All rights reserved | 
+            This template is made by TEAM B with <i class="far fa-heart"></i> aided by 
+        <a href="https://aptechajah.com/" class="text-decoration-none"> aptechajah.com</a>
+    </div>
+</footer>
+<!-- End of The Footer Code -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+       
+</body>
+</html>
